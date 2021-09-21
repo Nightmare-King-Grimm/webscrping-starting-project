@@ -8,11 +8,15 @@ import logging
 import warnings
 from typing import Optional
 
+
 from scrapy import signals
 from scrapy.http import Request
 from scrapy.utils.trackref import object_ref
 from scrapy.utils.url import url_is_from_spider
 from scrapy.utils.deprecate import method_is_overridden
+from scrapy.spiders.crawl import CrawlSpider, Rule
+from scrapy.spiders.feed import XMLFeedSpider, CSVFeedSpider
+from scrapy.spiders.sitemap import SitemapSpider
 
 class Spider(object_ref):
      name: Optional[str] = None
@@ -108,6 +112,3 @@ def __init__(self, name=None, **kwargs):
 
 
 # Top-level imports
-from scrapy.spiders.crawl import CrawlSpider, Rule
-from scrapy.spiders.feed import XMLFeedSpider, CSVFeedSpider
-from scrapy.spiders.sitemap import SitemapSpider
