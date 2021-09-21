@@ -8,7 +8,6 @@ import logging
 import warnings
 from typing import Optional
 
-
 from scrapy import signals
 from scrapy.http import Request
 from scrapy.utils.trackref import object_ref
