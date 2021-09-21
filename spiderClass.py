@@ -48,7 +48,6 @@ def __init__(self, name=None, **kwargs):
         spider._set_crawler(crawler)
         return spider
 
-
     def _set_crawler(self, crawler):
         self.crawler = crawler
         self.settings = crawler.settings
